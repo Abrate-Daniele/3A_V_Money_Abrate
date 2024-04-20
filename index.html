@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Money</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <header>
+        <section>
+            <h1>MONEY MONEY</h1>
+            <h4>Dividi le spese tra gli amici</h4>
+        </section>
+        <section>
+            <button onclick="Login()" id="Login">Login</button>
+        </section>
+    </header>
+    <main>
+        <section>
+            <fieldset>
+                <legend>Tutti i pagamenti</legend>
+                <main>
+                    <article>
+                        <span>20<span>04/24</span></span>
+                        <div id="NomePagante1">Giacomo</div>
+                        <div class="uscita" id="ImportoPagato1">30 €</div>
+                        <div id="NomePagato1">Negozio</div>
+                    </article>
+                    <article>
+                        <span>19<span>04/24</span></span>
+                        <div id="NomePagante2">Sara</div>
+                        <div class="entrata" id="ImportoPagato2">5 €</div>
+                        <div id="NomePagato2">Giacomo</div>
+                    </article>
+                </main>
+            </fieldset>
+            <fieldset>
+                <legend>Pagamenti da confermare</legend>
+                <main>
+                    <article onclick="Conferma()" id="DaConfermare">
+                        <span>20<span>04/24</span></span>
+                        <div id="NomePagante3">Giacomo</div>
+                        <div class="uscita" id="ImportoPagato3">50 €</div>
+                        <div id="NomePagato3">Locale</div>
+                    </article>
+                </main>
+            </fieldset>
+        </section>
+        <fieldset>
+            <legend>Aggiungi un pagamento</legend>
+            <div>
+                Pagante:
+                <select id="Pagante">
+                    <option value="ut1">Giacomo</option>
+                    <option value="ut2">Elisa</option>
+                    <option value="ut3">Alessandro</option>
+                    <option value="ut4">Sara</option> 
+                </select>
+            </div>
+            <div>
+                Pagato:
+                <select id="Pagato">
+                    <option value="ut1" id="ut1">Giacomo</option>
+                    <option value="ut2" id="ut2">Elisa</option>
+                    <option value="ut3" id="ut3">Alessandro</option>
+                    <option value="ut4" id="ut4">Sara</option>
+                    <option value="ut5" id="ut5">Negozio</option>
+                    <option value="ut6" id="ut6">Locale</option>
+                </select>
+            </div>
+            <div>Importo:<input type="number" id="Importo"></div>
+            <div>
+                Divisione del pagamento:
+                <ul>
+                    <li>Giacomo: <span id="importo1"></span></li>
+                    <li>Elisa: <span id="importo2"></span></li>
+                    <li>Sara: <span id="importo3"></span></li> 
+                    <li>Alessandro: <span id="importo4"></span></li>
+                </ul>
+                <button onclick="CalcolaDivisione()">Calcola divisione</button>
+            </div>
+            <button onclick="InserisciPagamento()">INSERISCI PAGAMENTO</button>
+        </fieldset>
+    </main>
+    <footer>
+        Creato da Abrate Daniele
+    </footer>
+</body>
+</html>
